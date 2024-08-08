@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
-import Portrait from "./Portrait.tsx";
-import Quote from "./Quote.tsx";
+import Portrait from "../components/Portrait.tsx";
+import Quote from "../components/Quote.tsx";
 const fadeInUp = {
     hidden: { opacity: 0, y: 50 },
     show: { opacity: 1, y: 0 },
