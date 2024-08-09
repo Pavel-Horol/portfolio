@@ -13,24 +13,30 @@ export const Header = () => {
     const toggleMenu = () => setIsOpen(prev => !prev)
 
     return (
-        <header className="flex flex-row justify-between items-center py-3 mt-3 tex">
-            <div className="flex flex-row items-center">
-                <img className="h-4" src={logo} alt="logo"/>
-                <p className="ml-2 font-bold text-white">Pasha</p>
-            </div>
-            <div className="lg:gap-5 gap-3 hidden sm:flex">
-                <Link to="/">
-                    <span className="text-primary">#</span><span className={`hover:text-white transition-all duration-150 ease-linear ${currentPath === '/' ? 'text-white font-bold' : ''}`}>home</span>
-                </Link>
-                <Link to="/projects">
-                     <span className="text-primary">#</span><span className={`hover:text-white transition-all duration-150 ease-linear ${currentPath === '/projects' ? 'text-white font-bold' : ''}`}>works</span>
-                </Link>
-                <Link to="/about">
-                    <span className="text-primary">#</span><span className={`hover:text-white transition-all duration-150 ease-linear ${currentPath === '/about' ? 'text-white font-bold' : ''}`}>about-me</span>
-                </Link>
-                <Link to="/contacts">
-                    <span className="text-primary">#</span><span className={`hover:text-white transition-all duration-150 ease-linear ${currentPath === '/contacts' ? 'text-white font-bold' : ''}`}>contacts</span>
-                </Link>
+        <header className="flex flex-row justify-between items-center py-3 mt-3 w-full max-w-2xl lg:max-w-7xl mx-auto">
+            <div className="w-full flex flex-row justify-between items-center">
+                <div className="flex flex-row items-center">
+                    <img className="h-4" src={logo} alt="logo"/>
+                    <p className="ml-2 font-bold text-white">Pasha</p>
+                </div>
+                <div className="lg:gap-5 gap-3 hidden sm:flex">
+                    <Link to="/">
+                        <span className="text-primary">#</span><span
+                        className={`hover:text-white transition-all duration-150 ease-linear ${currentPath === '/' ? 'text-white font-bold' : ''}`}>home</span>
+                    </Link>
+                    <Link to="/projects">
+                        <span className="text-primary">#</span><span
+                        className={`hover:text-white transition-all duration-150 ease-linear ${currentPath === '/projects' ? 'text-white font-bold' : ''}`}>works</span>
+                    </Link>
+                    <Link to="/about">
+                        <span className="text-primary">#</span><span
+                        className={`hover:text-white transition-all duration-150 ease-linear ${currentPath === '/about' ? 'text-white font-bold' : ''}`}>about-me</span>
+                    </Link>
+                    <Link to="/contacts">
+                        <span className="text-primary">#</span><span
+                        className={`hover:text-white transition-all duration-150 ease-linear ${currentPath === '/contacts' ? 'text-white font-bold' : ''}`}>contacts</span>
+                    </Link>
+                </div>
             </div>
             <div className="sm:hidden flex items-center">
                 <button
@@ -39,7 +45,8 @@ export const Header = () => {
                 >
                     <div className={`burger z-[60]  ${isOpen ? 'open' : ''}`}>
                         <div className="block w-6 h-0.5 bg-[#D9D9D9] mb-1 transition-transform duration-300 z-50"></div>
-                        <div className="block w-4 h-0.5 bg-[#D9D9D9] mb-1 ml-auto transition-transform duration-300 z-50"></div>
+                        <div
+                            className="block w-4 h-0.5 bg-[#D9D9D9] mb-1 ml-auto transition-transform duration-300 z-50"></div>
                     </div>
                 </button>
                 <div className={`menu-burger ${isOpen ? 'open' : ''}`}>
