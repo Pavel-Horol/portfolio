@@ -9,7 +9,6 @@ const Home = () => {
 
     return (
         <div className="flex flex-col gap-20 max-w-2xl lg:max-w-7xl mx-auto">
-
             <HeroSection/>
             <div className="max-sm:hidden flex flex-col gap-20 ">
                 <AnimateOnScroll variant="right">

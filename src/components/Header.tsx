@@ -1,6 +1,7 @@
 import {Link, useLocation} from "react-router-dom";
 import logo from '../assets/logo.svg'
 import {useEffect, useState} from "react";
+import { motion } from "framer-motion";
 
 export const Header = () => {
     const location = useLocation();
@@ -13,7 +14,17 @@ export const Header = () => {
     const toggleMenu = () => setIsOpen(prev => !prev)
 
     return (
-        <header className="flex flex-row justify-between items-center py-3 mt-3 w-full max-w-2xl lg:max-w-7xl mx-auto">
+
+        <motion.header
+            variants={{
+                hidden: { opacity: 0, y: -100 },
+                show: { opacity: 1, y: 0 },
+            }}
+            initial="hidden"
+            animate="show"
+            transition={{ duration: 1 }}
+            viewport={{ once: true, amount: 0.1 }}
+            className="flex flex-row justify-between items-center py-3 mt-3 w-full max-w-2xl lg:max-w-7xl mx-auto">
             <div className="w-full flex flex-row justify-between items-center">
                 <div className="flex flex-row items-center">
                     <img className="h-4" src={logo} alt="logo"/>
@@ -78,6 +89,6 @@ export const Header = () => {
                     </ul>
                 </div>
             </div>
-        </header>
+        </motion.header>
     );
 };

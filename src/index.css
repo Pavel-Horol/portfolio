@@ -58,12 +58,12 @@
         @apply relative
     }
     .quote-block::before {
-        @apply absolute bg-background top-[-15%] left-[2%]  ;
-        content: url('assets/openQuotes.svg');
+        @apply absolute p-2 bg-background lg:top-[-23%] top-[-20%] left-[2%] text-gray ;
+        content: url('assets/quote.svg');
     }
     .quote-block::after {
-        @apply absolute  bg-background  bottom-[-15%] sm:bottom-[-20%] right-[2%]  max-[325px]:bottom-[-10%] ;
-        content: url('assets/openQuotes.svg');
+        @apply absolute p-2 bg-background lg:bottom-[-25%]  bottom-[-20%] sm:bottom-[-20%] right-[2%]  max-[325px]:bottom-[-10%] ;
+        content: url('assets/quote.svg');
     }
     .box-gray {
         @apply size-24 absolute border-gray border-[1px]
