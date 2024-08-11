@@ -9,7 +9,7 @@ const AboutMeSection = () => {
                 <div className="">
                     <SectionDivide sectionName={"about-me"}/>
                     <div className="flex flex-row items-center justify-between">
-                        <div className=" max-w-[500px]">
+                        <div className=" max-w-[400px]">
                             <h3 className="leading-6 mb-8">Hello, i’m Pasha</h3>
                             <p className="leading-6 mb-8">I’m a self-taught front-end developer based in Kyiv, Ukraine.
                                 I
