@@ -62,7 +62,7 @@
         content: url('assets/quote.svg');
     }
     .quote-block::after {
-        @apply absolute p-2 pb-0 bg-background lg:bottom-[-25%]  bottom-[-10%] min-[320px]:bottom-[-13%] sm:bottom-[-15%] right-[2%]  max-[325px]:bottom-[-10%] ;
+        @apply absolute p-2 pb-0 bg-background lg:bottom-[-20%]  bottom-[-10%] min-[320px]:bottom-[-13%] sm:bottom-[-15%] right-[2%]  max-[325px]:bottom-[-10%] ;
         content: url('assets/quote.svg');
     }
     .box-gray {

@@ -1,15 +1,15 @@
 import { motion } from "framer-motion";
 import Portrait from "../components/Portrait.tsx";
 import Quote from "../components/Quote.tsx";
-const fadeInUp = {
+export const fadeInUp = {
     hidden: { opacity: 0, y: 50 },
     show: { opacity: 1, y: 0 },
 };
-const fadeInDown = {
+export const fadeInDown = {
     hidden: { opacity: 0, y: -100 },
     show: { opacity: 1, y: 0 },
 };
-const fadeInRight = {
+export const fadeInRight = {
     hidden: { opacity: 0, x: 150 },
     show: { opacity: 1, x: 0 },
 }
@@ -41,13 +41,7 @@ export const HeroSection = () => {
                     <Portrait/>
                 </motion.div>
             </motion.div>
-            <motion.div
-                variants={fadeInRight}
-                initial="hidden"
-                animate="show"
-                transition={{ duration: 1 }}
-                viewport={{ once: true, amount: 0.1 }}
-            >
+            <motion.div>
                 <Quote/>
             </motion.div>
         </div>
