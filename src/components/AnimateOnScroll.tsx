@@ -30,7 +30,7 @@ interface AnimateOnScrollProps { children: React.ReactNode, variant?: 'top' | 'b
 const AnimateOnScroll: React.FC<AnimateOnScrollProps> = ({ children, variant = 'bottom' }) => {
     const { ref, inView } = useInView({
         triggerOnce: true,
-        threshold: 0.3,
+        threshold: 0.5,
     });
 
     return (
