@@ -1,24 +1,23 @@
 import { motion } from "framer-motion";
 import Portrait from "../components/Portrait.tsx";
 import Quote from "../components/Quote.tsx";
-export const fadeInUp = {
-    hidden: { opacity: 0, y: 50 },
-    show: { opacity: 1, y: 0 },
-};
-export const fadeInDown = {
-    hidden: { opacity: 0, y: -100 },
-    show: { opacity: 1, y: 0 },
-};
-export const fadeInRight = {
-    hidden: { opacity: 0, x: 150 },
-    show: { opacity: 1, x: 0 },
-}
+import {useEffect, useState} from "react";
+import MessagePopup from "../components/MessagePopup.tsx";
 
-export const HeroSection = () => {
+const HeroSection = () => {
+    const [isOpen, setIsOpen] = useState<boolean>(false)
+
+    useEffect(() => {
+        document.body.classList.toggle('no-scroll', isOpen);
+    }, [isOpen]);
+    const toggleMenu = () => setIsOpen(prev => !prev)
     return (
         <div className="flex flex-col">
             <motion.div
-                variants={fadeInUp}
+                variants={{
+                    hidden: { opacity: 0, y: 50 },
+                    show: { opacity: 1, y: 0 },
+                }}
                 initial="hidden"
                 animate="show"
                 transition={{ duration: 1 }}
@@ -29,10 +28,13 @@ export const HeroSection = () => {
                     <h2 className="max-w-[500px] mb-8 font-semibold lg:text-3xl text-2xl ">Pasha is a <span
                         className="text-primary">fullstack developer</span></h2>
                     <p className="text-wrap mb-6 md:max-w-80">He crafts responsive websites where technologies meet creativity</p>
-                    <button className="btn-primary">Contact me !!</button>
+                    <button onClick={toggleMenu} className="btn-primary">Contact me !!</button>
                 </div>
                 <motion.div
-                    variants={fadeInDown}
+                    variants={{
+                        hidden: { opacity: 0, y: -100 },
+                        show: { opacity: 1, y: 0 },
+                    }}
                     initial="hidden"
                     animate="show"
                     transition={{ duration: 1 }}
@@ -44,6 +46,11 @@ export const HeroSection = () => {
             <motion.div>
                 <Quote/>
             </motion.div>
+            {isOpen &&
+                <MessagePopup toggleMenu={toggleMenu}/>
+            }
         </div>
     );
 };
+
+export default HeroSection

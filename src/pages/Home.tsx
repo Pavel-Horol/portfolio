@@ -1,4 +1,4 @@
-import {HeroSection} from "../sections/HeroSection.tsx";
+import HeroSection from "../sections/HeroSection.tsx";
 import ProjectSection from "../sections/ProjectSection.tsx";
 import AnimateOnScroll from "../components/AnimateOnScroll.tsx";
 import SkillSection from "../sections/SkillSection.tsx";

@@ -9,7 +9,7 @@ export const Footer = () => {
                     <div className="flex flex-col items-start">
                         <div className="flex flex-row items-center">
                             <img className="size-4" src={logo} alt="logo"/>
-                            <p className="ml-2">Pasha</p>
+                            <p className="ml-2 text-white">Pasha</p>
                         </div>
                         <p>Web designer and front-end developer</p>
                     </div>
