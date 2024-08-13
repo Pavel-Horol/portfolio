@@ -8,7 +8,7 @@ const About = () => {
     return (
 
         <div className="max-w-2xl lg:max-w-7xl mx-auto">
-            <div>
+            <div className="mb-4">
                 <h2 className="mb-4 text-white font-semibold text-3xl"><span className="text-primary">/</span>about-me</h2>
                 <p className="text-white">Who am i?</p>
             </div>
@@ -38,7 +38,7 @@ const About = () => {
             </div>
             <div className="mb-24">
                 <h3 className="font-medium mb-8 text-2xl text-white"><span className="text-primary">#</span>skills</h3>
-                <div className="flex flex-row items-start gap-4">
+                <div className="flex max-sm:flex-wrap flex-row items-start gap-4">
                     <SkillLabel name="Tools" content="Docker Docker Neovim Linux Insomnia Git Doker"/>
                     <SkillLabel name="Frameworks" content="React Redux Express NestJs"/>
                     <SkillLabel name="Databases" content="PostgreSQL MongoDB"/>
