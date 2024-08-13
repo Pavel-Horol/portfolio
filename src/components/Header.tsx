@@ -9,7 +9,6 @@ export const Header = () => {
     const [isOpen, setIsOpen] = useState<boolean>(false)
     useEffect(() => {
         document.body.classList.toggle('no-scroll', isOpen);
-        console.log()
     }, [isOpen]);
     const toggleMenu = () => setIsOpen(prev => !prev)
 

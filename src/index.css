@@ -48,6 +48,40 @@
     .btn-primary:hover {
         @apply bg-transparent-primary;
     }
+
+    .input-group {
+        @apply relative mx-0 ;
+    }
+
+    .input-group .input-label {
+        @apply py-0.5 px-1.5 -translate-y-1/2 absolute top-1/2 left-1.5 ease-linear duration-200 transition-all pointer-events-none;
+    }
+    .input-group .textarea-label {
+        @apply absolute top-1 left-1.5 py-0.5 px-1.5 ease-linear duration-200 transition-all pointer-events-none;
+    }
+
+    .input-group input,
+    .input-group textarea {
+        @apply w-full h-10 py-2.5 px-2.5 bg-transparent border-[1.2px] border-gray outline-none ;
+    }
+    .input-group textarea {
+        @apply w-full ;
+    }
+
+    .input-group textarea:focus~.textarea-label,
+    .input-group textarea:valid~.textarea-label{
+        @apply bg-background -top-2 text-xs text-white border-white;
+    }
+
+    .input-group input:focus~.input-label,
+    .input-group input:valid~.input-label {
+        @apply bg-background top-0 text-xs text-white border-white;
+    }
+    .input-group input:focus,
+    .input-group textarea:focus {
+        @apply text-white;
+    }
+
     .btn-gray {
         @apply px-3 py-1 border border-gray font-medium text-base transition-colors duration-150 ease-linear;
     }

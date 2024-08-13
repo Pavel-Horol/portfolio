@@ -11,6 +11,7 @@ export default {
         background: "#212A3E",
         gray: "#9BA4B5",
         'transparent-gray': 'rgba(171, 178, 191, 0.2)',
+        'popup-gray': 'rgba(171, 178, 191, 0.8)',
         'transparent-primary':'rgba(199, 120, 221, 0.2)',
       },
       fontFamily: {
