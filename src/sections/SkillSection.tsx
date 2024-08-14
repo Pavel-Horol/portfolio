@@ -2,6 +2,7 @@ import SkillLabel from "../components/SkillLabel.tsx";
 import SectionDivide from "../components/SectionDivide.tsx";
 import {Dots} from "../components/Dots.tsx";
 import logo from "../assets/outlineLogo.svg"
+import {skills} from "../content/contents.ts";
 const SkillSection = () => {
     return (
         <div className="mx-auto max-w-2xl lg:max-w-7xl">
@@ -20,15 +21,15 @@ const SkillSection = () => {
                 </div>
                 <div className="ml-auto flex justify-end gap-4">
                     <div className="flex flex-col">
-                    <SkillLabel name="Languages" content="TypeScript Lua Python JavaScript"/>
+                        <SkillLabel name={skills[0].name} content={skills[0].content}/>
                     </div>
                     <div className="flex flex-col">
-                        <SkillLabel name="Databases" content="PostgreSQL MongoDB"/>
-                        <SkillLabel name="Other" content="HTML CSS Tailwindcss"/>
+                        <SkillLabel name={skills[1].name} content={skills[1].content}/>
+                        <SkillLabel  name={skills[2].name} content={skills[2].content}/>
                     </div>
                     <div className="flex flex-col">
-                        <SkillLabel name="Tools" content="Neovim Linux Insomnia Git Doker"/>
-                        <SkillLabel name="Frameworks" content="React Redux Express NestJs"/>
+                        <SkillLabel  name={skills[3].name} content={skills[3].content}/>
+                        <SkillLabel  name={skills[4].name} content={skills[4].content}/>
                     </div>
                 </div>
             </div>

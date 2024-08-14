@@ -10,7 +10,7 @@ const ContactsSection = () => {
             <div>
                 <SectionDivide sectionName={"contacts"}/>
                 <div className="flex flex-row justify-between gap-4">
-                    <p className="max-w-[500px]">I’m interested in freelance opportunities. However, if you have
+                    <p className="max-w-[500px]">I’m interested in permanent opportunities. However, if you have
                         other
                         request or question, don’t hesitate to contact me</p>
                     <div className="p-4 border w-fit max-md:text-sm">

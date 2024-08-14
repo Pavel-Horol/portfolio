@@ -2,6 +2,7 @@ import {motion, useIsPresent} from "framer-motion";
 import dude from "../assets/aboutMeHuman.png";
 import {Dots} from "../components/Dots.tsx";
 import SkillLabel from "../components/SkillLabel.tsx";
+import {skills} from "../content/contents.ts";
 
 const About = () => {
     const isPresent = useIsPresent()
@@ -39,11 +40,9 @@ const About = () => {
             <div className="mb-24">
                 <h3 className="font-medium mb-8 text-2xl text-white"><span className="text-primary">#</span>skills</h3>
                 <div className="flex max-sm:flex-wrap flex-row items-start gap-4">
-                    <SkillLabel name="Tools" content="Docker Docker Neovim Linux Insomnia Git Doker"/>
-                    <SkillLabel name="Frameworks" content="React Redux Express NestJs"/>
-                    <SkillLabel name="Databases" content="PostgreSQL MongoDB"/>
-                    <SkillLabel name="Other" content="HTML CSS Tailwindcss SCSS Some more and also"/>
-                    <SkillLabel name="Languages" content="TypeScript Lua Python JavaScript"/>
+                    {skills.map(({name, content}, index) => (
+                        <SkillLabel name={name} content={content} key={index} />
+                    ) )}
                 </div>
             </div>
             <div>

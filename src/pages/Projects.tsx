@@ -1,6 +1,7 @@
 import {motion, useIsPresent} from "framer-motion";
 import ProjectSection from "../sections/ProjectSection.tsx";
 import SmallProject from "../components/SmallProject.tsx";
+import {smallProjects} from "../content/contents.ts";
 
 const Projects = () => {
     const isPresent = useIsPresent()
@@ -18,11 +19,11 @@ const Projects = () => {
             <div>
                 <h3 className="text-3xl text-white  font-medium mb-6"><span className="text-primary">#</span>small-projects</h3>
                 <div className="mt-6 grid justify-items-stretch grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-8">
-                    <SmallProject/>
-                    <SmallProject/>
-                    <SmallProject/>
-                    <SmallProject/>
-                    <SmallProject/>
+                    {
+                        smallProjects.map(({tags, name, description, cached}, index) => (
+                            <SmallProject tags={tags} name={name} description={description} cached={cached} key={index}/>
+                        ))
+                    }
                 </div>
             </div>
 

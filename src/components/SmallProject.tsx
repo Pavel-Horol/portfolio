@@ -1,10 +1,10 @@
 import {FC} from "react";
 
 interface SmallProjectProps {
-    tags?: string
-    name?: string
-    description?: string
-    link?: string
+    tags: string
+    name: string
+    description: string
+    cached: string
 }
 
 const SmallProject:FC<SmallProjectProps> = (
@@ -12,7 +12,7 @@ const SmallProject:FC<SmallProjectProps> = (
         name = "Name",
         tags = "Tags tags tags",
         description = "some description",
-        link = "#"
+        cached = "#"
     }) => {
     return (
         <div className="border">
@@ -20,7 +20,7 @@ const SmallProject:FC<SmallProjectProps> = (
             <div className="p-4">
                 <h3 className="mb-3 font-medium text-white text-2xl">{name}</h3>
                 <p className="mb-3">{description}</p>
-                <button className="btn-primary"><a href={link}>{'Github <~>'}</a></button>
+                <button className="btn-primary"><a href={cached}>{'Github <~>'}</a></button>
             </div>
         </div>
     );
