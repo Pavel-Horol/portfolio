@@ -16,7 +16,7 @@ const AboutMeSection:FC<AboutMeSectionProps> = ({showBtn = true}) => {
                     <div className="flex max-md:flex-col flex-row items-center justify-between">
                         <div className="max-w-[400px]">
                             <h3 className="leading-6 mb-8">Hello, i’m Pasha</h3>
-                            <p className="leading-6 mb-8">I’m a self-taught front-end developer based in Kyiv, Ukraine.
+                            <p className="leading-6 mb-8">I’m a self-taught front-end developer based in Dnipro, Ukraine.
                                 I can develop responsive websites from scratch and raise them into modern user-friendly web experiences.
                             </p>
                             <p className="leading-6 mb-8">

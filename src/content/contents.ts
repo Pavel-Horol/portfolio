@@ -73,7 +73,7 @@ export const projects: DetailedProject[] = [
         img: gamePhoto,
         tags: "React TS Canvas",
         name: "Ray casting game",
-        description: "This is visit card for registration on course, form data sending to telegram",
+        description: "This is a pseudo 3d game that use ray casting for implement 3d graphic",
         live: "https://ray-cast-game-lemon.vercel.app/",
         cached: "https://github.com/Pavel-Horol/ray_cast_game.git"
     },

@@ -11,7 +11,7 @@ interface ProjectSectionProps {
 const ProjectSection:FC<ProjectSectionProps> = ({show = true}) => {
     return (
         <>
-            <div className="mx-auto max-w-2xl lg:max-w-7xl">
+            <div className="mx-auto block max-w-2xl lg:max-w-7xl">
                 {show &&
                     <div className="flex flex-row justify-between w-full">
                         <SectionDivide sectionName={"projects"}/>
@@ -19,8 +19,7 @@ const ProjectSection:FC<ProjectSectionProps> = ({show = true}) => {
                             to="/projects">{"View all ~~>"}</Link></div>
                     </div>
                 }
-                <div
-                    className="mt-6 grid justify-items-stretch grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-8">
+                <div className="mt-6 grid justify-items-stretch grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-8">
                     {projects.map(({img, name, tags, description, live, cached}, index) => (
                         <Project
                             img={img}
